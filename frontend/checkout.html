@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="لمسة — أزياء نسائية بتفاصيل أنيقة. متجر تجريبي باللغة العربية."
+    />
+    <title>إتمام الطلب | لمسة LAMSA</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/storefront.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">انتقلي إلى المحتوى</a>
+    <div id="site-header"></div>
+    <main id="main">
+      <div class="wrap section">
+        <div class="page-head">
+          <h1>إتمام الطلب</h1>
+          <p>راجعي تفاصيلكِ قبل تأكيد الطلب.</p>
+        </div>
+        <div id="checkout-message" role="status"></div>
+        <div class="checkout-layout">
+          <form id="checkout-form">
+            <h2>بيانات التوصيل</h2>
+            <div class="form-grid">
+              <label class="field"
+                >الاسم الكامل<input
+                  name="name"
+                  required
+                  minlength="3"
+                  maxlength="100"
+                  autocomplete="name" /></label
+              ><label class="field"
+                >رقم الهاتف<input
+                  name="phone"
+                  required
+                  type="tel"
+                  dir="ltr"
+                  placeholder="+970 أو +972"
+                  autocomplete="tel"
+                  maxlength="30" /></label
+              ><label class="field span-2"
+                >البريد الإلكتروني (اختياري)<input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  dir="ltr"
+                  maxlength="254" /></label
+              ><label class="field span-2"
+                >المنطقة / المدينة المتاحة للتوصيل<select
+                  name="shipping_region_id"
+                  id="checkout-region"
+                  required
+                >
+                  <option value="">اختاري الوجهة</option>
+                </select></label
+              ><label class="field"
+                >البلدة / الحي<input
+                  name="neighborhood"
+                  required
+                  maxlength="100"
+                  autocomplete="address-line1" /></label
+              ><label class="field"
+                >الشارع<input
+                  name="street"
+                  required
+                  maxlength="100"
+                  autocomplete="address-line2" /></label
+              ><label class="field"
+                >رقم المبنى<input
+                  name="building"
+                  required
+                  maxlength="30" /></label
+              ><label class="field"
+                >تفاصيل إضافية<input name="details" maxlength="500" /></label
+              ><label class="field span-2"
+                >ملاحظات الطلب<textarea
+                  name="notes"
+                  maxlength="1000"
+                ></textarea>
+              </label>
+            </div>
+            <h3>طريقة الدفع</h3>
+            <p class="notice">
+              الدفع عند الاستلام فقط، بعد تفعيله من المتجر للوجهة المختارة. لا
+              تتوفر مدفوعات إلكترونية حالياً.
+            </p>
+            <p>
+              <a class="text-link" href="/info.html?page=terms"
+                >الشروط والأحكام</a
+              >
+              ·
+              <a class="text-link" href="/info.html?page=privacy_policy"
+                >الخصوصية</a
+              >
+            </p>
+            <label class="check"
+              ><input type="checkbox" required />قرأت الشروط وسياسة الخصوصية
+              وأوافق عليهما.</label
+            ><button class="btn" id="place-order">تأكيد الطلب</button>
+            <div id="checkout-error" role="alert"></div>
+          </form>
+          <aside id="checkout-summary" class="summary"></aside>
+        </div>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
+</html>

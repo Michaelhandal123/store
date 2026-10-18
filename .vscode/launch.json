@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug LAMSA (GCC/GDB)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/lamsa",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "environment": [{ "name": "LAMSA_ALLOW_ORDERS", "value": "0" }],
+      "stopAtEntry": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": false,
+      "preLaunchTask": "build",
+      "windows": {
+        "program": "${workspaceFolder}/build/lamsa.exe",
+        "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+        "environment": [
+          { "name": "PATH", "value": "C:\\msys64\\ucrt64\\bin;${env:PATH}" },
+          { "name": "LAMSA_ALLOW_ORDERS", "value": "0" }
+        ]
+      },
+      "setupCommands": [
+        {
+          "description": "Enable GDB pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

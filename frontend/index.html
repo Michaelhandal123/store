@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="لمسة — أزياء نسائية بتفاصيل أنيقة. متجر تجريبي باللغة العربية."
+    />
+    <title>الرئيسية | لمسة LAMSA</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/storefront.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">انتقلي إلى المحتوى</a>
+    <div id="site-header"></div>
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">LAMSA — THE EVERYDAY EDIT</div>
+          <h1 id="hero-title">أناقتك <em>تبدأ من هنا</em></h1>
+          <p id="hero-text">
+            اكتشفي أحدث صيحات الموضة النسائية التي تجمع بين الأناقة والراحة.
+          </p>
+          <a class="btn" href="/products.html"
+            >تسوقي المجموعة <span aria-hidden="true">←</span></a
+          >
+          <div class="hero-note">تفاصيل تُحبّينها. أناقة تُشبهك.</div>
+        </div>
+        <div class="hero-art">
+          <img
+            src="/assets/hero.svg"
+            alt="رسم أزياء أصلي لمعطف أنيق بألوان دافئة"
+            fetchpriority="high"
+            width="900"
+            height="1100"
+          />
+        </div>
+      </section>
+      <div class="assurances">
+        <span>◇ اختيارات بعناية</span><span>◇ أناقة لكل يوم</span
+        ><span>◇ تفاصيل تصنع الفرق</span>
+      </div>
+      <section class="section wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">لكل إطلالة حكاية</p>
+            <h2>اكتشفي أسلوبك</h2>
+          </div>
+          <a class="text-link" href="/products.html">جميع المنتجات ←</a>
+        </div>
+        <div class="categories" id="home-categories"></div>
+      </section>
+      <section class="section wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">إضافات جديدة لخزانتك</p>
+            <h2>وصل حديثاً</h2>
+          </div>
+          <a class="text-link" href="/products.html?new=1">اكتشفي الجديد ←</a>
+        </div>
+        <div id="new-products" class="product-grid"></div>
+      </section>
+      <section class="soft-section section">
+        <div class="wrap editorial">
+          <img
+            src="/assets/look-5.svg"
+            alt="رسم توضيحي لطقم بألوان محايدة"
+            loading="lazy"
+          />
+          <div>
+            <div class="eyebrow">LESS, BUT LOVELIER</div>
+            <h2>لأن الأناقة<br />في التفاصيل.</h2>
+            <p id="brand-about">
+              نؤمن أن أجمل الإطلالات هي التي تشبهك. قصّات هادئة، ألوان دافئة،
+              ومساحة لأسلوبك الخاص.
+            </p>
+            <a href="/info.html?page=about" class="text-link">حكاية لمسة ←</a>
+          </div>
+        </div>
+      </section>
+      <section class="section wrap">
+        <div class="section-head">
+          <div>
+            <p id="featured-kicker" class="kicker">
+              مختارة لكِ · مجموعة مميّزة قابلة للتعديل
+            </p>
+            <h2 id="featured-title">اختيارات لمسة</h2>
+          </div>
+          <a
+            id="featured-link"
+            class="text-link"
+            href="/products.html?featured=1"
+            >شاهدي المجموعة ←</a
+          >
+        </div>
+        <div class="product-grid" id="featured-products"></div>
+      </section>
+      <section class="section wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">فرصة لإطلالة جديدة</p>
+            <h2>لمسات بسعر أجمل</h2>
+          </div>
+          <a class="text-link" href="/products.html?sale=1">جميع التخفيضات ←</a>
+        </div>
+        <div class="product-grid" id="sale-products"></div>
+      </section>
+      <div class="brand-strip">
+        <h2 dir="ltr">LAMSA</h2>
+        <p>لمسة منكِ. أسلوب لكِ.</p>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
+</html>

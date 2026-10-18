@@ -1,0 +1,1 @@
+Run `build/lamsa --seed` from the project root. Seeds 24 clearly marked demonstration products and disabled example delivery destinations, once only. No orders, statistics or credentials are seeded. Seeding refuses to run if any product already exists. Normal server startup never seeds or clears data.

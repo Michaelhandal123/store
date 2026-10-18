@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "configure",
+      "type": "process",
+      "command": "cmake",
+      "args": ["-S", ".", "-B", "build", "-DCMAKE_BUILD_TYPE=Debug"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "windows": {
+        "command": "C:\\msys64\\ucrt64\\bin\\cmake.exe",
+        "args": [
+          "-S",
+          ".",
+          "-B",
+          "build",
+          "-G",
+          "Ninja",
+          "-DCMAKE_BUILD_TYPE=Debug",
+          "-DCMAKE_C_COMPILER=C:/msys64/ucrt64/bin/gcc.exe",
+          "-DCMAKE_CXX_COMPILER=C:/msys64/ucrt64/bin/g++.exe",
+          "-DOPENSSL_ROOT_DIR=C:/msys64/ucrt64"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}",
+          "env": { "PATH": "C:\\msys64\\ucrt64\\bin;${env:PATH}" }
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "process",
+      "command": "cmake",
+      "args": ["--build", "build", "--parallel", "2"],
+      "dependsOn": "configure",
+      "options": { "cwd": "${workspaceFolder}" },
+      "windows": {
+        "command": "C:\\msys64\\ucrt64\\bin\\cmake.exe",
+        "options": {
+          "cwd": "${workspaceFolder}",
+          "env": { "PATH": "C:\\msys64\\ucrt64\\bin;${env:PATH}" }
+        }
+      },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "test",
+      "type": "process",
+      "command": "ctest",
+      "args": ["--test-dir", "build", "--output-on-failure"],
+      "dependsOn": "build",
+      "options": { "cwd": "${workspaceFolder}" },
+      "windows": {
+        "command": "C:\\msys64\\ucrt64\\bin\\ctest.exe",
+        "options": {
+          "cwd": "${workspaceFolder}",
+          "env": { "PATH": "C:\\msys64\\ucrt64\\bin;${env:PATH}" }
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}

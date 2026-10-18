@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="لمسة — أزياء نسائية بتفاصيل أنيقة. متجر تجريبي باللغة العربية."
+    />
+    <title>جميع المنتجات | لمسة LAMSA</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/storefront.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">انتقلي إلى المحتوى</a>
+    <div id="site-header"></div>
+    <main id="main">
+      <div class="wrap">
+        <div class="page-head">
+          <div class="eyebrow">THE COLLECTION</div>
+          <h1>خزانة من الاحتمالات</h1>
+          <p>قطع تختارينها اليوم، وتحبّينها كل يوم.</p>
+        </div>
+        <div class="shop-layout section">
+          <form id="filters" class="filters">
+            <h2 class="sr-only">البحث والتصفية</h2>
+            <label class="field"
+              >ابحثي عن قطعتك<input
+                name="q"
+                placeholder="اسم المنتج أو وصفه" /></label
+            ><label class="field"
+              >الفئة<select name="category" id="category-filter">
+                <option value="">كل الفئات</option>
+              </select></label
+            ><label class="field"
+              >أقل سعر (₪)<input
+                type="number"
+                min="0"
+                max="100000"
+                step="0.01"
+                name="min" /></label
+            ><label class="field"
+              >أعلى سعر (₪)<input
+                type="number"
+                min="0"
+                max="100000"
+                step="0.01"
+                name="max" /></label
+            ><label class="field"
+              >المقاس<select name="size">
+                <option value="">كل المقاسات</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select></label
+            ><label class="field"
+              >اللون<select name="color">
+                <option value="">كل الألوان</option>
+              </select></label
+            ><label class="check"
+              ><input type="checkbox" name="new" value="1" /> وصل حديثاً</label
+            ><label class="check"
+              ><input type="checkbox" name="featured" value="1" /> اختيارات
+              لمسة</label
+            ><label class="check"
+              ><input type="checkbox" name="sale" value="1" /> التخفيضات</label
+            ><label class="check"
+              ><input type="checkbox" name="available" value="1" /> متوفر
+              الآن</label
+            ><button class="btn" type="submit">عرض النتائج</button
+            ><button class="btn light" type="reset">مسح الفلاتر</button>
+          </form>
+          <div>
+            <div class="catalog-top">
+              <p id="result-count" aria-live="polite">جارٍ تحميل المجموعة…</p>
+              <label
+                >الترتيب
+                <select class="control" id="sort">
+                  <option value="featured">المميّزة أولاً</option>
+                  <option value="newest">الأحدث أولاً</option>
+                  <option value="price_asc">السعر: من الأقل للأعلى</option>
+                  <option value="price_desc">السعر: من الأعلى للأقل</option>
+                  <option value="name">الاسم</option>
+                </select></label
+              >
+            </div>
+            <div id="catalog" class="product-grid catalog-grid"></div>
+            <div class="pagination" id="pagination"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
+</html>
