@@ -62,7 +62,7 @@ try:
             page.locator(f'#checkout-form [name={key}]').fill(value)
         page.locator('#checkout-region').select_option('1')
         page.locator('#checkout-form [type=checkbox]').check()
-        
+
         try: expect(page.locator('#place-order')).to_be_enabled()
         except Exception:
             print('CHECKOUT DIAGNOSTICS:',page.locator('#checkout-message').inner_text(), page.locator('#checkout-summary').inner_text(), page.locator('#checkout-region').input_value(),page.evaluate("localStorage.getItem('lamsa-cart')"), errors)
